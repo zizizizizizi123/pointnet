@@ -2,8 +2,10 @@ import os
 import sys
 import numpy as np
 import h5py
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR)
+# os.path.abspath(__file__)获取当前文件的绝对路径，例如”E:\test\provider.py“，
+# os.path.dirname()则将该文件的绝对路径中的文件名取出，BASE_DIR = "E:\test"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
+sys.path.append(BASE_DIR)                     # 将其加入系统路径中         
 
 # Download dataset for point cloud classification
 DATA_DIR = os.path.join(BASE_DIR, 'data')
